@@ -25,7 +25,7 @@ export interface GitSearch {
           "received_events_url": string,
           "type": string,
           "site_admin": boolean
-        },
+        };
         "private": boolean,
         "html_url": string,
         "description": string,
@@ -94,5 +94,4 @@ export interface GitSearch {
         "score": number
       }
     >
-
 }
