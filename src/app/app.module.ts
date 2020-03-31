@@ -9,6 +9,7 @@ import { GitUsersService } from './git-users.service';
 import { HomePageComponent } from './home-page/home-page.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { RouterModule, Routes } from '@angular/router';
+import { NoSpecialCharsDirective } from './no-special-chars.directive';
 
 const appRoutes: Routes = [
   { path: '', 
@@ -31,7 +32,8 @@ const appRoutes: Routes = [
     AppComponent,
     GitSearchComponent,
     HomePageComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    NoSpecialCharsDirective
     
   ],
   imports: [
@@ -40,7 +42,8 @@ const appRoutes: Routes = [
     HttpClientModule,
     RouterModule.forRoot(
       appRoutes
-    )
+    ),
+    ReactiveFormsModule
   ],
   providers: [GitSearchService, GitUsersService ],
   bootstrap: [AppComponent]
